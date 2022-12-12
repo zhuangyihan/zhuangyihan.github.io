@@ -1,1 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{width: 1584px;margin: 0px;padding: 0px;}
+        #clear{clear: both;}
+        ul{margin: 0px;padding: 0px;}
+        #nav ul li{float: left;width: 100px;height: 34px;text-align: center;display: inline;line-height: 34px;}
+        #nav ul li a{text-decoration: none;color: white;}
+        #nav ul li ul{visibility: hidden;position: absolute;z-index: 1;width: 150px;}
+        #nav ul li ul li{width: 150px;height: 34px;text-align: left;background: #9b0707;}
+        #nav ul li:hover{background: url(web/nav_current.jpg);}
+        #nav ul li:hover ul{visibility: visible;}
+        #nav ul li ul li:hover{background: #db1a1a;}
+        #nav ul li ul li a{color: white;}
+        #cl{clear: both;}
+        #divl{width: 1584px;margin: 0px;padding: 0px auto;}
+        #head{height: 230px;background: url(web/logn2_01.gif);}
+        #nav{height: 34px;background: url(web/nav_bg.jpg);padding: 0px auto;}
+        #logo{padding: 40px 0px 0px 0px;}
+        #hom{width: 1000px;}
+        #divl1{width: 307px;height: 260px;background: url(web/announcement_bg.jpg);margin: 15px 28px 25px 10px;padding: 0px;float: left;}
+        #divl1_1{float: right;width: 235px;height: 260px;margin: 0px 10px 0px 0px;}
+        #divl1_1 a{size: 13px;text-decoration: none;color: black;}
+        #divl1_1 a:hover{color: red;}
+        #divl1_1_1{height: 29px;margin: 0px;padding: 0px;border-bottom:#a2a2a2 solid 1px ;}
+        #divl1_1_2{height: 29px;margin: 10px 0px 0px 0px;padding: 0px;border-bottom:#a2a2a2 solid 1px ;}
+        #divl1_1_1 p{margin: 0px;}
+        #divl2{width: 645px;height: 260px;float: right;margin: 15px 10px 25px 0px;padding: 0px;}
+        .dil1{margin: 0px 0px 0px 300px;}
+        #broud_left{width: 300px;float: left;}
+        #broud_right{width: 283px;float:left;}
+        #main{width: 1000px;float: left;}
+        #split{margin: 0px 10px;height: 7px;background: url(web/dividing-line-01.gif);}
+        #split1{margin: 0px auto;height: 5px;background: url(web/split1.gif);}
+        #last{background: url(web/ben.gif);height: 248px;}
+        #last_main{margin: 0px 0px 0px 300px;}
+        #last1_1 img{padding: 10px 0px 0px 3px;}
+        #fl{float: left;}
+        #p1{color: #a30001;font-weight: bold;font-size: 13px;margin: 7px 0px;}
+        #p2{font-size:11px;margin: 7px 0px;}
+        #p3{font-size: 22px;color:#a30001 ;font-weight: bolder;margin: 15px 0px;}
+        #last1_2{float: right;width: 647px;margin: 0px 263px 0px 10px;}
+        #l2_1{padding: 13px 0px 6px 0px;}
+        #b1{font-size: 11px;}
+        #b1 a{ color: black;text-decoration: none;}
+        #b1 a:hover{color: red;}
+        #last_split{border-bottom: #a2a2a2 dotted 2px;height: 2px;width: 1000px;margin: 0px 0px 0px 300px;}
+        #last_main ul{margin: 0px auto;padding: 0px;}
+        #last_main ul li{float: left;text-align: center;display: inline;line-height: 27px;padding: 0px 18px;}
+        #last_main ul li a{color: black;text-decoration: none;}
+        #last_main ul li a:hover{color: red;}
+        #lil{margin: 0px 0px 0px 121px;}
+        #mainl1{margin: 28px 0px 0px 0px;width: 1000px;}
+        #mainl1 p{margin: 8px auto;}
+        #mainl1 a{color: black;text-decoration: none;}
+        #mainl1 a:hover{color: red;}
+        #er_main{margin: 26px 10px 0px 10px ;height:244px ;width: 980px;}
+        #er_main_1{float: left;margin: 0px 13px 0px 0px;height: 100%;width: 307px;}
+        .s2_1{position: relative;left: 80%;top: -12%;}
+        .s2_2{position: relative;left: 74%;top: -12%;}
+        .s2_3{position: relative;left: 80%;top: -12%;}
+        #er_1{margin-top: 10px;height: 201px;width: 307px;position: relative;top: -10%;}
+        #er_main_2{float: left;height: 100%;width: 307px;border-left:1px dotted #a2a2a2;padding-left: 16px;padding-right: 14px;}
+        #er_2 p{font-size: 12px;margin: 14px 0px;}
+        #er_2 a{color: black;text-decoration: none;}
+        #er_2 a:hover{color: red;}
+        #er_2{position: relative;top: -12%;}
+        #er_main_3{float: left;width: 306px;height: 100%;padding-left: 14px;border-left:1px dotted #a2a2a2 ;}
+        #split2{height: 30px;margin: 0px 10px;width: 980px;background: url(web/split2_03.gif);}
+        #san_main{height: 285px;width: 980px;margin: 25px 10px 0px 10px;}
+        #sam_main_1{position: relative;left: 56%;margin-top: -6%;}
+        #sam_main_1 a{text-decoration: none;font-size: 11px;color: black;}
+        #sam_main_1 a:hover{color: red;}
+        #sam_main_2{margin: 8px 29px 26px 0px;height: 209px;width: 307px;float: left;}
+        #sam_main_3{width: 301px;margin: 8px 36px 26px 0px;;height: 209px;float: left;}
+        #sam_p1{position: relative;left: 19%;font-weight: bold;margin-top: -9%;}
+        #sam_p2{position: relative;left: 80%;color: red;margin-top: -11%;}
+        #sam_p2 a{color: red;text-decoration: none;}
+        #sam_main_3_1 p{font-size: 12px;margin: 14px 0px;}
+        #sam_main_3_1 a{color: black;text-decoration: none;}
+        #sam_main_3_1 a:hover{color: red;}
+        #sam_main_4{float: left;width: 302px;margin: 8px 0px 26px 0px;height: 209px;}
+        #split3{margin: 0px 10px;width: 980px;height: 2px;background: url(../line_01.gif);}
+        #four_main{width: 980px;margin: 25px 10px 33px 10px;height: 201px;}
+        #four_main_1{height: 201px;margin-right:35px ;width: 301px;float: left;}
+        #four_main_2{float: left;height: 201px;margin-right:35px ;width: 301px;}
+        #five_main{margin: 25px 10px;height: 254px;width: 980px;}
+        #six_main{margin: 25px 10px 0 10px ;width: 980px;height: 212px;}
+        #six_main_1{height: 100%;width: 307px;margin-right: 29px;float: left;}
+        #six_main_2{height: 100px;width: 300px;margin-right: 36px;float: left;}
+        #six_main_3{height: 100%;width: 307px;float: left;background: url(web/module-index-apply-bg.jpg);}
+        #six_1{border-bottom: 1px #a2a2a2 solid;width: 167px;margin: 0px;}
+        #six_fun p{margin: 10px 0px;font-size: 11px;}
+        #six_fun a{color: black;text-decoration: none;}
+        #six_fun a:hover{color: red;}
+        #six_fun{position: relative;top: 8%;left: 40%;}
+        #main_end{width: 100%;height: 75px;}
+        #main_end img{position: relative;top:20% ;}
 
+        .re{position: relative;top: -6%;height: 260px;}
+        .re ul li{position: absolute;display: inline;transition: 1s;opacity: 0;}
+        .re ol{list-style:none;position: relative;top: 87%;left: 80%;}
+        .re ol li{background: #333333;color: white;width: 20px ;height: 20px;float: left;margin-right: 10px;text-align: center;}
+
+        .re4 ul li{position: absolute;display: inline;transition: 1s;opacity: 0;}
+        #re4_1{margin-right: 15px;position: relative;}
+        .re4 ol li{position: relative;float: left;width: 11px;height: 11px;margin-right: 6px;background: #bfbfbf;display: inline;border-radius: 2em;}
+        .re4 ol{position: relative;height: 11px;left: 33%;top: 70%;}
+        #re41{height: 213px;position: relative;}
+        .re4{height: 213px;}
+
+
+        #five_1{position: relative;top: -15%;left: 94%;}
+        #mediun{margin:0px 16px 0px 0px;position: relative;top: -17px;}
+        .re3 ul li{display: inline;transition: 1s;opacity: 0;position: absolute;}
+        #name{position: relative;margin-right: 12px;top: -10px;}
+        #sp1{position: relative;left: 5%;top: -51px;margin-right: 12%;font-size: 14px;}
+        #tu_five{position: relative;top: -256px;width: 153px;left: 10px;margin-right: 35px;}
+        .re3{position: relative;}
+        .re3 ol{position: relative;top: -70px;left: 818px;}
+        .re3 ol li{float: left;width: 11px;height: 11px;margin-right: 6px;background: #bfbfbf;display: inline;border-radius: 2em;}
+        #i3_right{border: none;padding: 0px;background: url(web/products_pag_btn.png);width: 6px;height: 10px;position: relative;top: -74px;background-position-y: 10px;left: 809px;}
+        #i3_left{border: none;padding: 0px;width: 6px;height: 10px;position: relative;top: -74px;left: 755px;background: url(web/products_pag_btn.png);}
+
+        .re2 ul li{display: inline;position: absolute;transition: 1s;opacity: 0;}
+        .in_left{background: url(web/news_banner_btn.png);width: 35px;height: 35px;border: none;position: absolute;margin-top: 88px;}
+        .in_right{background: url(wee/news_banner_btn.png);width: 35px;height: 35px;border: none;background-position: 35px 0px;position: absolute;margin-top: 88px;margin-left: 272px;}
+        .re2 #r2_li_wen{background: url(web/news_banner_info.png);font-size: 11px;height: 30px;text-align: center;color: white;width: 100%;position: absolute;z-index: 1;margin-top: -34px;}
+        .re2 #r2_li_wen a:hover{color: red;}
+        .re2 #r2_li_wen a{color: white;text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div id="divl">
+        <div id="head">
+            <div class="dil1">
+                <div id="logo"><img src="web/logo.png" width="321px" height="82px"></div>
+            </div>           
+        </div>
+        <div id="nav">
+            <div class="dil1">
+                <ul>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">中心简介</a>
+                        <ul>
+                            <li id=""><a href="">宗旨</a></li>
+                            <li><a href="">校训</a></li>
+                            <li><a href="">校规</a></li>
+                            <li><a href="">教学形式</a></li>
+                            <li><a href="">交通路线</a></li>
+                            <li><a href="">联系我们</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">影音艺苑</a>
+                        <ul>
+                            <li><a href="split1.html">德音雅乐</a></li>
+                            <li><a href="">影音课堂</a></li>
+                            <li><a href="">活动记录</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">教学为先</a>
+                        <ul>
+                            <li><a href="">幸福人生讲座</a></li>
+                            <li><a href="">王凤仪性命誓学思想</a></li>
+                            <li><a href="">原始点</a></li>
+                            <li><a href="">研习班</a></li>
+                            <li><a href="">义工班</a></li>
+                            <li><a href="">原始点</a></li>
+                            <li><a href="">专家讲座</a></li>
+                            <li><a href="">周末班</a></li>
+                        </ul>   
+                    </li>
+                    <li><a href="">素食养生</a></li>
+                    <li><a href="">义卖展示</a></li>
+                    <li><a href="">爱心传递</a>
+                        <ul>
+                            <li><a href="">义工风采</a></li>
+                            <li><a href="">义工活动</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">网上报名</a>
+                        <ul>
+                            <li><a href="split2.html">长期义工报名</a></li>
+                            <li><a href="">短期义工报名</a></li>
+                            <li><a href="">网上义工报名</a></li>
+                        </ul>
+                    </li>
+                </ul>
+    
+            </div>
+            
+        </div>
+        <div id="broud_left">
+            <img src="web/broudleft_02.gif">
+
+        </div>
+        <div id="main">
+            <div id="hom">
+                <div id="divl1">
+                    <img src="web/announcement_hd.jpg" style="margin: 12px 7px 0px 11px;">
+                    <div id="divl1_1">
+                        <div id="divl1_1_2"><p><img src="web/biao1.gif"><a href="">成长日记意见反馈征集活动</a></p></div>
+                        <div id="divl1_1_1"><p><img src="web/biao1.gif"><a href="">结缘明城国学赠公告</a></p></div>
+                        <div id="divl1_1_1"><p><img src="web/biao1.gif"><a href="">公司诚征长期供货商</a></p></div>
+                        <div id="divl1_1_1"id="divl1_1_1"><p><img src="web/biao1.gif"><a href="">明城招长期义工</a></p></div>
+                        <div id="divl1_1_1"><p><img src="web/biao1.gif"><a href="">明城招网上义工</a></p></div>
+                        <div id="divl1_1_1"><p><img src="web/biao1.gif"><a href="">成长日记意见反馈征集活动</a></p></div>
+                        <div id="divl1_1_1"><p><img src="web/biao1.gif"><a href="">成长日记意见反馈征集活动</a></p></div>
+                        <div id="divl1_1_1"><p><img src="web/biao1.gif"><a href="">结缘明城国学赠公告</a></p></div>
+                    </div>
+                </div>
+                <div id="divl2">
+                    <div class="re">
+                        <ul>
+                            <li><img src="upload/banner_01.jpg"></li>
+                            <li><img src="upload/banner_02.jpg"></li>
+                            <li><img src="upload/banner_03.jpg"></li>
+                        </ul>
+                        <ol>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div id="clear"></div>
+            <div id="split"></div>
+            <div id="er_main">
+                <div id="er_main_1">
+                    <img src="web/news_tit_01.png">
+                    <img src="web/more_img.png" class="s2_1">
+                    <div id="er_1">
+                        <img src="web/sp_03.gif">
+                    </div>
+
+                </div>
+                <div id="er_main_2">
+                    <img src="web/news_tit_02.png">
+                    <a><img src="web/more_img.png" class="s2_2"></a>
+                    <div id="er_2">
+                        <p><img src="web/biao1.gif"><a href="">为国教子 以德育人——幼儿师资培训班</a></p>
+                        <p><img src="web/biao1.gif"><a href="">中华优秀传统文化师资培训基地招募启示</a></p>
+                        <p><img src="web/biao1.gif"><a href="">《厚德少年夏令营》招生简章</a></p>
+                        <p><img src="web/biao1.gif"><a href="">重庆三百多学生集体给长辈洗脚 家长热泪盈眶</a></p>
+                        <p><img src="web/biao1.gif"><a href="">第45期深圳蛇口《幸福人生讲座》剪影</a></p>
+                        <p><img src="web/biao1.gif"><a href="">复旦校长批教育功利：无德学生越有知识越祸害</a></p>
+                        <p><img src="web/biao1.gif"><a href="">为国教子 以德育人——幼儿师资培训班</a></p>
+                    </div>
+
+                </div>
+                <div id="er_main_3">
+                    <img src="web/news_tit_03.png">
+                    <a><img src="web/more_img.png" class="s2_3"></a>
+                    <div id="er_2">
+                        <p><img src="web/biao1.gif"><a href="">为国教子 以德育人——幼儿师资培训班</a></p>
+                        <p><img src="web/biao1.gif"><a href="">中华优秀传统文化师资培训基地招募启示</a></p>
+                        <p><img src="web/biao1.gif"><a href="">《厚德少年夏令营》招生简章</a></p>
+                        <p><img src="web/biao1.gif"><a href="">重庆三百多学生集体给长辈洗脚 家长热泪盈眶</a></p>
+                        <p><img src="web/biao1.gif"><a href="">第45期深圳蛇口《幸福人生讲座》剪影</a></p>
+                        <p><img src="web/biao1.gif"><a href="">复旦校长批教育功利：无德学生越有知识越祸害</a></p>
+                        <p><img src="web/biao1.gif"><a href="">为国教子 以德育人——幼儿师资培训班</a></p>
+                    </div>
+                </div>
+            </div>
+            <div id="clear"></div>
+            <div id="split2"></div>
+            <div id="san_main">
+                <img src="web/san_1.gif">
+                <div id="sam_main_1">
+                    <p><a href="">幸福人生讲座</a>&nbsp;&nbsp;<a href="">王凤仪性命誓学思想</a>&nbsp;&nbsp;<a href="">原始点</a>&nbsp;&nbsp;<a href="">研习班</a>&nbsp;&nbsp;<a href="">义工班</a>&nbsp;&nbsp;<a href="">专题讲座</a>&nbsp;&nbsp;<a href="">周末班</a></p>
+                </div>
+                <div id="sam_main_2">
+                    <div class="re2">
+                        <ul>
+                            <li>
+                                <div>
+                                    <img src="upload/news_img_307x209.jpg">
+                                    <div id="r2_li_wen"><p><a href="">拿什么奉献给你，妈妈——母亲节让我们一起感恩母爱</a></p></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="upload/news_img_307x209.jpg">
+                                </div>
+                            </li>
+                        </ul>
+                        <input type="button" id="in_left" class="in_left" onclick="an_left()">
+                        <input type="button" id="in_right" class="in_right" onclick="an_left()">
+
+                    </div>
+
+                </div>
+                <div id="sam_main_3">
+                    <img src="web/mc-icon.png"><p id="sam_p1">幸福人生讲座</p><p id="sam_p2"><a href="">【更多】</a></p>
+                    <div id="sam_main_3_1">
+                        <p><img src="web/biao1.gif"><a href="">为国教子 以德育人——幼儿师资培训班</a></p>
+                        <p><img src="web/biao1.gif"><a href="">中华优秀传统文化师资培训基地招募启示</a></p>
+                        <p><img src="web/biao1.gif"><a href="">《厚德少年夏令营》招生简章</a></p>
+                        <p><img src="web/biao1.gif"><a href="">重庆三百多学生集体给长辈洗脚 家长热泪盈眶</a></p>
+                        <p><img src="web/biao1.gif"><a href="">第45期深圳蛇口《幸福人生讲座》剪影</a></p>
+                        <p><img src="web/biao1.gif"><a href="">复旦校长批教育功利：无德学生越有知识越祸害</a></p>
+                    </div>
+                </div>
+                <div id="sam_main_4">
+                    <img src="web/mc-icon.png"><p id="sam_p1">王凤仪性命誓学思想</p><p id="sam_p2"><a href="">【更多】</a></p>
+                    <div id="sam_main_3_1">
+                        <p><img src="web/biao1.gif"><a href="">为国教子 以德育人——幼儿师资培训班</a></p>
+                        <p><img src="web/biao1.gif"><a href="">中华优秀传统文化师资培训基地招募启示</a></p>
+                        <p><img src="web/biao1.gif"><a href="">《厚德少年夏令营》招生简章</a></p>
+                        <p><img src="web/biao1.gif"><a href="">重庆三百多学生集体给长辈洗脚 家长热泪盈眶</a></p>
+                        <p><img src="web/biao1.gif"><a href="">第45期深圳蛇口《幸福人生讲座》剪影</a></p>
+                        <p><img src="web/biao1.gif"><a href="">复旦校长批教育功利：无德学生越有知识越祸害</a></p>
+                    </div>
+                </div>
+            </div>
+            <div id="clear"></div>
+            <div id="split3"></div>
+            <div id="four_main">
+                <div id="four_main_1">
+                    <img src="web/mc-icon.png"><p id="sam_p1">原始点</p><p id="sam_p2"><a href="">【更多】</a></p>
+                    <div id="sam_main_3_1">
+                        <p><img src="web/biao1.gif"><a href="">为国教子 以德育人——幼儿师资培训班</a></p>
+                        <p><img src="web/biao1.gif"><a href="">中华优秀传统文化师资培训基地招募启示</a></p>
+                        <p><img src="web/biao1.gif"><a href="">《厚德少年夏令营》招生简章</a></p>
+                        <p><img src="web/biao1.gif"><a href="">重庆三百多学生集体给长辈洗脚 家长热泪盈眶</a></p>
+                        <p><img src="web/biao1.gif"><a href="">第45期深圳蛇口《幸福人生讲座》剪影</a></p>
+                        <p><img src="web/biao1.gif"><a href="">复旦校长批教育功利：无德学生越有知识越祸害</a></p>
+                    </div>
+                </div>
+                <div id="four_main_2">
+                    <img src="web/mc-icon.png"><p id="sam_p1">研习班</p><p id="sam_p2"><a href="">【更多】</a></p>
+                    <div id="sam_main_3_1">
+                        <p><img src="web/biao1.gif"><a href="">为国教子 以德育人——幼儿师资培训班</a></p>
+                        <p><img src="web/biao1.gif"><a href="">中华优秀传统文化师资培训基地招募启示</a></p>
+                        <p><img src="web/biao1.gif"><a href="">《厚德少年夏令营》招生简章</a></p>
+                        <p><img src="web/biao1.gif"><a href="">重庆三百多学生集体给长辈洗脚 家长热泪盈眶</a></p>
+                        <p><img src="web/biao1.gif"><a href="">第45期深圳蛇口《幸福人生讲座》剪影</a></p>
+                        <p><img src="web/biao1.gif"><a href="">复旦校长批教育功利：无德学生越有知识越祸害</a></p>
+                    </div>
+                </div>
+                <div id="sam_main_4">
+                    <img src="web/mc-icon.png"><p id="sam_p1">专题讲座</p><p id="sam_p2"><a href="">【更多】</a></p>
+                    <div id="sam_main_3_1">
+                        <p><img src="web/biao1.gif"><a href="">为国教子 以德育人——幼儿师资培训班</a></p>
+                        <p><img src="web/biao1.gif"><a href="">中华优秀传统文化师资培训基地招募启示</a></p>
+                        <p><img src="web/biao1.gif"><a href="">《厚德少年夏令营》招生简章</a></p>
+                        <p><img src="web/biao1.gif"><a href="">重庆三百多学生集体给长辈洗脚 家长热泪盈眶</a></p>
+                        <p><img src="web/biao1.gif"><a href="">第45期深圳蛇口《幸福人生讲座》剪影</a></p>
+                        <p><img src="web/biao1.gif"><a href="">复旦校长批教育功利：无德学生越有知识越祸害</a></p>
+                    </div>
+                </div>
+            </div>
+            <div id="clear"></div>
+            <div id="split"></div>
+            <div id="five_main">
+                <img src="web/yimai.gif">
+                <a href=""><img src="web/more_img.png" id="five_1"></a>
+                <div class="re3">
+                    <ul>
+                        <li>
+                            <div>
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <p>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                </p>
+                                <img src="upload/products_01_152x145.jpg" id="tu_five">
+                                <img src="upload/products_02_152x145.jpg" id="tu_five">
+                                <img src="upload/products_03_152x145.jpg" id="tu_five">
+                                <img src="upload/products_04_152x145.jpg" id="tu_five">
+                                <img src="upload/products_05_161x154.jpg" id="tu_five">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <p>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                </p>
+                                <img src="upload/products_01_152x145.jpg" id="tu_five">
+                                <img src="upload/products_02_152x145.jpg" id="tu_five">
+                                <img src="upload/products_03_152x145.jpg" id="tu_five">
+                                <img src="upload/products_04_152x145.jpg" id="tu_five">
+                                <img src="upload/products_05_161x154.jpg" id="tu_five">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                <img src="web/pro_small_box.jpg" id="mediun">
+                                
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <img src="web/pro_name_bg.jpg" id="name">
+                                <p>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                    <span id="sp1">弟子规拼图</span>
+                                </p>
+                                <img src="upload/products_01_152x145.jpg" id="tu_five">
+                                <img src="upload/products_02_152x145.jpg" id="tu_five">
+                                <img src="upload/products_03_152x145.jpg" id="tu_five">
+                                <img src="upload/products_04_152x145.jpg" id="tu_five">
+                                <img src="upload/products_05_161x154.jpg" id="tu_five">
+                            </div>
+                        </li>
+                    </ul>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    <input type="button" id="i3_left" onclick="er3_left()">
+                    <input type="button" id="i3_right" onclick="er3_right()">
+
+                </div>
+
+            </div>
+            <div id="clear"></div>
+            <div id="split"></div>
+            <div id="six_main">
+                <div id="six_main_1">
+                    <img src="web/mc-icon.png"><p id="sam_p1">义工风采</p><p id="sam_p2"><a href="">【更多】</a></p>
+                    <div class="re4">
+                        <ul>
+                            <li>
+                                <div id="re41">
+                                    <img id="re4_1" src="upload/fencai_01_146x126.jpg">
+                                    <img src="upload/fencai_02_146x126.jpg">
+                                </div>
+                            </li>
+                            <li>
+                                <div id="re41">
+                                    <img id="re4_1" src="upload/fencai_01_146x126.jpg">
+                                    <img src="upload/fencai_02_146x126.jpg">
+                                </div>
+                            </li>
+                        </ul>
+                        <div id="clear"></div>
+                        <ol>
+                            <li></li>
+                            <li></li>
+                        </ol>
+
+                    </div>
+                </div>
+                <div id="six_main_2">
+                    <img src="web/mc-icon.png"><p id="sam_p1">义工活动</p><p id="sam_p2"><a href="">【更多】</a></p>
+                    <div id="sam_main_3_1">
+                        <p><img src="web/biao1.gif"><a href="">为国教子 以德育人——幼儿师资培训班</a></p>
+                        <p><img src="web/biao1.gif"><a href="">中华优秀传统文化师资培训基地招募启示</a></p>
+                        <p><img src="web/biao1.gif"><a href="">《厚德少年夏令营》招生简章</a></p>
+                        <p><img src="web/biao1.gif"><a href="">重庆三百多学生集体给长辈洗脚 家长热泪盈眶</a></p>
+                        <p><img src="web/biao1.gif"><a href="">第45期深圳蛇口《幸福人生讲座》剪影</a></p>
+                        <p><img src="web/biao1.gif"><a href="">复旦校长批教育功利：无德学生越有知识越祸害</a></p>
+                    </div>
+                </div>
+                <div id="six_main_3">
+                    <div id="six_fun">
+                        <div id="six_1">
+                            <p><img src="icon/ico_app_link.png"><a href="split2.html">【长期义工报名】</a></p>
+                        </div>
+                        <div id="six_1">
+                            <p><img src="icon/ico_app_link.png"><a href="">【短期义工报名】</a></p>
+                        </div>
+                        <div id="six_1">
+                            <p><img src="icon/ico_app_link.png"><a href="">【网上义工报名】</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="clear"></div>
+            <div id="main_end"><img src="web/main_container_bg.jpg"></div>
+        </div>
+
+
+        <div id="broud_right">
+            <img src="web/broudright_03.gif">
+        </div>
+        <div id="clear"></div>
+        <div id="split1"></div>
+        <div id="last">
+            <div id="last_main">
+                <div id="last1_1">
+                    <div style="float:left ;">
+                        <img src="web/module-help-contact-bg.png">
+                    </div>
+                    <div id="fl">
+                        <p id="p1">客服热线</p>
+                        <p id="p2">便携的电话咨询</p>
+                        <p id="p3">400-123-4567</p>
+                    </div>
+                </div>
+                <div id="last1_2">
+                    <div id="l2_1"><img src="web/fri_tit.png"></div>
+                    <div>
+                        <p id="b1"><a href="http://www.dfg.cn/">大方广文化公益网</a>&nbsp;<a href="http://cjrwh.com/whly.asp">马来西亚中华文化教育中心</a>&nbsp;<a href="">净空老教授专集网站</a>&nbsp;<a href="http://www.dfg.cn/">大方广文化公益网</a>&nbsp;<a href="http://cjrwh.com/whly.asp">马来西亚中华文化教育中心</a></p>
+                        <p id="b1"><a href="">净空老教授专集网站</a>&nbsp;<a href="http://www.dfg.cn/">大方广文化公益网</a>&nbsp;<a href="http://cjrwh.com/whly.asp" >马来西亚中华文化教育中心</a></p>
+                    </div>
+                </div>     
+            </div>
+            <div id="clear"></div>
+            <div id="last_split"></div>
+            <div id="last_main">
+                <ul>
+                    <li id="lil"><a href="">首页</a></li>
+                    <li><a href="">中心简介</a></li>
+                    <li><a href="">影音艺苑</a></li>
+                    <li><a href="">教学为先</a></li>
+                    <li><a href="">素食养生</a></li>
+                    <li><a href="">义卖展示</a></li>
+                    <li><a href="">爱心传递</a></li>
+                    <li><a href="">网上报名</a></li>
+                </ul>
+            </div>
+            <div id="clear"></div>
+            <div id="last_split"></div>
+            <div id="last_main">
+                <div id="mainl1">
+                    <p align="center">地址:深圳市福田区福强路福民新村福昌大厦一楼&nbsp;&nbsp;电话:020-123456&nbsp;&nbsp;邮箱：mingchengsz@163.com</p>
+                    <p align="center">版权所有&nbsp;&nbsp;明城国学教育中心&nbsp;&nbsp;&nbsp;粤ICP备0903729*号</p>
+                    <p align="center"><a href=""><img src="icon/ico_qq.gif">客服1</a>&nbsp;&nbsp;<a href=""><img src="icon/ico_qq.gif">客服2</a>&nbsp;&nbsp;<a href=""><img src="../icon/ico_qq.gif">客服3</a></p>
+
+
+                </div>
+            </div>
+
+        </div>
+        <script>
+            window.onload = function(){
+                var box=this.document.getElementsByClassName("re")[0];
+                var lik=box.getElementsByTagName("li");
+                function fun(i,j){//转换图片函数，就是把透明度改了一下
+                    lik[i].style.opacity=1;
+                    lik[j].style.opacity=0;
+                    lik[i+3].style.backgroundColor="#ff6600";//改一下小图标
+                    lik[j+3].style.backgroundColor="#333333";
+                }
+                fun(0,1);//初始化下
+                var i =0;
+                function auto(){//轮播循环函数
+                    if(++i>=3){
+                        i=0;
+                        fun(0,2);
+                    }
+                    else fun(i,i-1);
+                }
+                timer=this.setInterval(auto,2000);
+                box.onmouseover = function () { //鼠标划上去，停止轮播
+                    console.log('good');
+                    clearInterval(timer);
+                }
+                box.onmouseout = function () { //鼠标划出，继续轮播
+                    timer = setInterval(auto, 2000); //调用定时器
+                }
+                var j =0;
+                for(;j<3;j++){//点击小图标也可以转换图片
+                    lik[j+3].ind=j;
+                    lik[j+3].onclick=function(){
+                        fun(this.ind,i)
+                        i=this.ind;
+                    }
+                }
+
+                var box2=this.document.getElementsByClassName("re2")[0];
+                var lik2=box2.getElementsByTagName("li");
+                function an(w,s){
+                    lik2[w].style.opacity=1;
+                    lik2[s].style.opacity=0;
+                }
+                an(0,1);
+                 an_left = function(){
+                    if(lik2[0].style.opacity!=1){
+                        an(0,1);
+                    }else{
+                        an(1,0);
+                    }
+                }
+
+                
+                var box3=this.document.getElementsByClassName("re3")[0];
+                var lik3=box3.getElementsByTagName("li");
+                function fun3(z,x){
+                    lik3[z].style.opacity=1;
+                    lik3[x].style.opacity=0;
+                    lik3[z+3].style.backgroundColor="#000000";//改一下小图标
+                    lik3[x+3].style.backgroundColor="#bfbfbf";
+                }
+                fun3(0,1)
+                var z=0;
+                var x=0;
+                for(;x<3;x++){//点击小图标也可以转换图片
+                    lik3[x+3].ind=x;
+                    lik3[x+3].onclick=function(){
+                        fun3(this.ind,z)
+                        z=this.ind;
+                    }
+                }
+                er3_right =function(){
+                    if(lik3[0].style.opacity==1){
+                        fun3(1,0);
+                    }else if(lik3[1].style.opacity==1){
+                        fun(2,1)
+                    }else if(lik3[2].style.opacity==1){
+                        fun(0,2)
+                    }
+                }
+                er3_left =function(){
+                    if(lik3[0].style.opacity==1){
+                        fun3(2,0);
+                    }else if(lik3[1].style.opacity==1){
+                        fun(0,1)
+                    }else if(lik3[2].style.opacity==1){
+                        fun(1,2)
+                    }
+                }
+                
+
+                var box4=this.document.getElementsByClassName("re4")[0];
+                var lik4=box4.getElementsByTagName("li");
+                function fun4(a,b){
+                    lik4[a].style.opacity=1;
+                    lik4[b].style.opacity=0;
+                    lik4[a+2].style.backgroundColor="#000000";//改一下小图标
+                    lik4[b+2].style.backgroundColor="#bfbfbf";
+                }
+                fun4(0,1);
+                var a=0;
+                function auto(){//轮播循环函数
+                    if(++i>=3){
+                        i=0;
+                        fun(0,2);
+                    }
+                    else fun(i,i-1);
+                }
+                var b=0;
+                for(;b<3;b++){//点击小图标也可以转换图片
+                    lik4[b+2].ond=b;
+                    lik4[b+2].onclick=function(){
+                        fun4(this.ond,a)
+                        a=this.ond;
+                    }
+                }
+                
+
+
+
+            }
+
+        </script>
+    </div>
+</body>
+</html>
